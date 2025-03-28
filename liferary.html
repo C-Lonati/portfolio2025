@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="포트폴리오 서브페이지">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <title>about Liferary</title>
+</head>
+
+<body id="sub_Liferary">
+    <section id="intro" class="sub">
+        <div class="intro intro1">
+            <h2 class="introText introText1">온라인 도서 플랫폼</h2>
+        </div>
+        <div class="intro intro2">
+            <h2 class="introText introText1">Liferary</h2>
+        </div>
+    </section>
+    <div id="subPage">
+        <header id="header">
+            <div class="headerInner">
+                <h1>
+                    <a href="#">
+                        <img src="images/liferary/logo.svg" alt="liferary 로고">
+                    </a>
+                </h1>
+                <ul class="nav">
+                    <li class="hidden"><a href="#intro">인트로</a></li>
+                    <li><a href="#overview">개요</a></li>
+                    <li><a href="#preview">미리보기</a></li>
+                    <li><a href="#problem">문제점</a></li>
+                    <li><a href="#mockUp">갤러리</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="overview" class="parallaxItem">
+            <p class="toList"><a href="index.html#work">목록보기</a></p>
+            <img src="images/project1.jpg" alt="liferary 대표이미지" class="right">
+            <h2>개요</h2>
+            <ul class="twoCol">
+                <li>
+                    <h3>온라인 서점 및 E북 열람 플랫폼 Liferary</h3>
+                    <p>라이브러리 : Liferary는 js 라이브러리를 사용하지 않은 프로젝트입니다.</p>
+                    <p>구분 : 2인 팀 프로젝트</p>
+                    <p>기여도 : 80%(적응형에서 반응형으로 변경 반영)</p>
+                <li>
+                    <h3>컬러</h3>
+                    <ul class="color">
+                        <li>
+                            <div class="box" data-color="#78530f"></div>
+                            <p>#78530f</p>
+                        </li>
+                        <li>
+                            <div class="box" data-color="#a6762b"></div>
+                            <p>#a6762b</p>
+                        </li>
+                        <li>
+                            <div class="box" data-color="#9cd7ab"></div>
+                            <p>#9cd7ab</p>
+                        </li>
+                        <li>
+                            <div class="box" data-color="#114e27"></div>
+                            <p>#114e27</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>상세 기여 내용</h3>
+            <ul class="contribute">
+                <li>· <a href="#" class="pageLink">메인페이지</a> 기획 및 제작</li>
+                <li>· <a href="#" class="pageLink">게시판 페이지</a> 기획 및 제작</li>
+                <li>· <a href="#" class="pageLink">글쓰기 페이지</a> 기획 및 제작</li>
+                <li>· <a href="#" class="pageLink">작가 소개 페이지</a> 제작</li>
+                <li>· <a href="#" class="pageLink">추천도서 페이지</a> 제작</li>
+                <li>· <a href="#" class="pageLink">상품 상세 페이지</a> 제작</li>
+                <li>· <a href="#" class="pageLink">도서 미리보기 페이지</a> 기획 및 제작</li>
+                <li>· 배너 이미지 제작</li>
+                <li>· 공용페이지(로그인, 회원가입, 헤더, 푸터 등) 제작</li>
+            </ul>
+            <ul class="twoCol">
+                <li>
+                    <h3>타겟</h3>
+                    <ul class="target">
+                        <li>· 첫 페이지에서 너무 많은 정보를 보여주는 온라인 서점이 불편한 사람들</li>
+                        <li>· 커뮤니티 기능을 필요로 하는 독자들</li>
+                        <li>· 해외서적을 번역기능을 통해 빠르게 즐기고 싶은 독자들</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>폰트</h3>
+                    <ul class="font">
+                        <li class="berlin">
+                            <p>Berlin Sans FB</p>
+                            <p class="large">로고 용도로 사용된 폰트입니다.</p>
+                        </li>
+                        <li class="payboc">
+                            <p>Ibm Plex Sans KR</p>
+                            <p class="large">문단 제목 용도로 사용된 폰트입니다.</p>
+                            <p class="medium">본문 용도로 사용된 폰트입니다.</p>
+                            <p class="small">추천도서 페이지 내 설명글 용도로 사용된 폰트입니다.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="images/liferary/seo.JPG" alt="seo결과" class="seo">
+            <div class="optimize">
+                <h3>최적화</h3>
+                <ul>
+                    <li>· 페이지 최적화를 위해 lighthouse를 통한 최적화, css와 js파일들을 압축 상태로 업로드 하였습니다.</li>
+                    <li>· 검색 최적화를 위해 lighthouse를 활용했고, SEO 100점을 달성했습니다.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- section#overview end -->
+        <section id="preview" class="parallaxItem">
+            <h2>Preview</h2>
+            <div class="preview">
+                <div class="photo photo1">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/main.png" alt="liferary 메인">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">메인 페이지</a></h3>
+                        <p>참여 항목 : 기획 및 제작</p>
+                        <p>구현 기능 목록 : 배너 슬라이드, header 및 footer innerHTML 사용하여 그리기</p>
+                        <div class="codeBox">
+                            <pre>
+//control banner
+function leftSlide(indexNum){
+    photo[indexNum].animate([
+        // keyframes
+        { left: '0px', zIndex: '1' },
+        { left: '-1200px', zIndex: '1'  },
+        { left: '-1200px', zIndex: '-1' },
+        ], {
+        // timing options
+        duration: 2000
+    });
+    photo[indexNum].style.zIndex=-1;
+}
+function leftSlideReverse(indexNum){
+    photo[indexNum].animate([
+        // keyframes
+        { left: '0px', zIndex: '1' },
+        { left: '1200px', zIndex: '1'  },
+        { left: '1200px', zIndex: '-1' },
+        ], {
+        // timing options
+        duration: 2000
+    });
+    photo[indexNum].style.zIndex=-1;
+}
+function centerSlide(indexNum){
+    photo[indexNum].animate([
+        // keyframes
+        { left: '1200px', zIndex: '1' },
+        { left: '0px', zIndex: '1' },
+        { left: '0px', zIndex: '1' }
+        ], {
+        // timing options
+        duration: 2000
+    });
+    photo[indexNum].style.zIndex=2;
+}
+function centerSlideReverse(indexNum){
+    photo[indexNum].animate([
+        // keyframes
+        { left: '-1200px', zIndex: '1' },
+        { left: '0px', zIndex: '1' },
+        { left: '0px', zIndex: '1' },
+        ], {
+        // timing options
+        duration: 2000
+    });
+    photo[indexNum].style.zIndex=2;
+}
+//button clickEvent
+rightBtn.addEventListener('click', () => {
+    if(photoNumMax <= photoNum)
+        centerSlide(0);
+    else centerSlide(photoNum+1);
+        leftSlide(photoNum);
+    if(photoNumMax <= photoNum)
+        photoNum=0;
+    else photoNum++;
+});
+leftBtn.addEventListener('click', () => {
+    if(photoNum == 0)
+        centerSlideReverse(photoNumMax);
+    else centerSlideReverse(photoNum-1);
+    leftSlideReverse(photoNum);
+    if(photoNum == 0)
+        photoNum = photoNumMax;
+    else photoNum--;
+});</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo2">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/bbs.png" alt="liferary 게시판 페이지">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">게시판 페이지</a></h3>
+                        <p>참여 항목 : 기획 및 제작</p>
+                        <p>구현 기능 목록 : 클릭하여 글 열기, 도서 장르 변경(lnb 값 변경으로 대체), 게시판 페이지 번호 변경</p>
+                        <div class="codeBox">
+                            <pre>
+//lnb control
+const selection = document.querySelectorAll('.lnb>li');
+const lnbSelected = document.getElementsByClassName('lnbSelected');
+const lnbNow = document.getElementsByClassName('lnbNow');
+selection.forEach((element) => { //forEach(반복문의 일종) : 배열을 쪼개서 배열 
+개수만큼 실행시킴 배열 내부의 각 값은 ()내부의 값인 element로 호출가능
+  element.addEventListener('click', () => {
+    lnbSelected[0].classList.remove('lnbSelected'); 
+//.lnbSelected의 lnbSelected클래스를 삭제
+    element.classList.add('lnbSelected'); 
+//클릭한 .lnb>li에 lnbSelected클래스 부여
+    lnbNow[0].innerHTML = element.innerHTML; 
+//.lnbNow의 내부값을 클릭한 .lnb>li의 내부값으로 변경
+  });
+});
+
+//bbs review control
+const review = document.getElementsByClassName('review');
+const reviewBody = document.getElementsByClassName('reviewBody');
+const reviewBodySelect = document.getElementsByClassName('reviewBodySelect');
+const pageN = document.querySelectorAll('.pageN>a');
+const pageNSelect = document.getElementsByClassName('pageNSelect');
+for(let i=0;i<review.length;i++){ //반복문 .reveiw의 개수만큼 실행
+    review[i].addEventListener('click', () => { 
+        if (reviewBodySelect[0]) //조건문 .reviewBodySelect가 있으면
+            reviewBodySelect[0].classList.remove('reviewBodySelect'); 
+            //.reviewBodySelect의 reviewBodySelect클래스를 삭제
+        reviewBody[i].classList.add('reviewBodySelect'); 
+        //클릭한 reviewBody에 reviewBodySelect클래스를 부여
+    });
+}
+
+//bbs page number control
+pageN.forEach((element) => { /*forEach(반복문의 일종) : 배열을 
+쪼개서 배열 개수만큼 실행시킴 배열 내부의 각 값은 ()내부의 값인 element로 호출가능*/
+    element.addEventListener('click', ()=> {
+        pageNSelect[0].classList.remove('pageNSelect'); 
+        //.pageNSelect의 pageNSelect클래스를 삭제
+        element.classList.add('pageNSelect'); 
+        //클릭한 .pageN>a에 pageNSelect클래스를 부여
+    });
+});</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo3">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/writerIntro.png" alt="liferary 작가 소개 페이지">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">작가 소개 페이지</a></h3>
+                        <p>참여 항목 : 제작</p>
+                        <p>구현 기능 목록 : 인터뷰 열기 및 닫기</p>
+                        <div class="codeBox">
+                            <pre>
+//moreBtn control
+const more = document.getElementsByClassName('more');
+const interviewBody = document.getElementsByClassName('interviewBody');
+for(let i=0;i<more.length;i++){
+    more[i].addEventListener('click', () => {
+        interviewBody[i].style.display='block';
+        more[i].style.display='none';
+    });
+    interviewBody[i].addEventListener('click', ()=> {
+        interviewBody[i].style.display='none';
+        more[i].style.display='block';
+    });
+}</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo4">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/recomn.png" alt="liferary 도서 추천 페이지">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">추천 도서 페이지</a></h3>
+                        <p>참여 항목 : 제작</p>
+                        <p>구현 기능 목록 : 도서 장르 및 추천항목 변경(lnb 값 변경으로 대체)</p>
+                        <div class="codeBox">
+                            <pre>
+//lnb control
+const selection = document.querySelectorAll('.lnb>li');
+const lnbSelected = document.getElementsByClassName('lnbSelected');
+const lnbNow = document.getElementsByClassName('lnbNow');
+selection.forEach((element) => { //forEach(반복문의 일종) : 배열을 쪼개서 배열 
+개수만큼 실행시킴 배열 내부의 각 값은 ()내부의 값인 element로 호출가능
+  element.addEventListener('click', () => {
+    lnbSelected[0].classList.remove('lnbSelected'); 
+//.lnbSelected의 lnbSelected클래스를 삭제
+    element.classList.add('lnbSelected'); 
+//클릭한 .lnb>li에 lnbSelected클래스 부여
+    lnbNow[0].innerHTML = element.innerHTML; 
+//.lnbNow의 내부값을 클릭한 .lnb>li의 내부값으로 변경
+  });
+});
+
+//sideMenu(snb) control
+const snbSelection = document.querySelectorAll('.snb>li');
+const snbSelected = document.getElementsByClassName('snbSelected');
+const snbNow = document.getElementsByClassName('snbNow');
+snbSelection.forEach((element) => { //forEach(반복문의 일종) : 배열을 쪼개서 배열 개수만큼 실행시킴 
+배열 내부의 각 값은 ()내부의 값인 element로 호출가능
+  element.addEventListener('click', () => {
+    snbSelected[0].classList.remove('snbSelected'); //.snbSelected의 snbSelected클래스를 삭제
+    element.classList.add('snbSelected'); //클릭한 .snb>li에 snbSelected클래스 부여
+    snbNow[0].innerHTML = element.innerHTML; //.snbNow의 내부값을 클릭한 .snb>li의 내부값으로 변경
+  });
+});</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo5">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/bookInfo.png" alt="liferary 상품 상세 페이지">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">상품 상세 페이지</a></h3>
+                        <p>참여 항목 : 제작</p>
+                        <p>구현 기능 목록 : 상품 개수 동기화 및 상품 가격 정규화하여 표시, 댓글 더보기 및 접기 기능</p>
+                        <div class="codeBox">
+                            <pre>const more = document.getElementsByClassName('more');
+const less = document.getElementsByClassName('less');
+const hidden = document.getElementsByClassName('hidden');
+const follow = document.getElementById('followingMenu');
+const number = document.getElementsByClassName('number');
+const price = document.getElementsByClassName('price');
+const miniBtn = document.querySelectorAll('.miniBtn');
+let productPrice = Number(13500);
+for(let i=0;i<hidden.length;i++){
+    more[0].addEventListener('click', () => {
+        hidden[i].style.display='block';
+        more[0].style.display='none';
+    });
+}
+for(let i=0;i<hidden.length;i++){
+    less[0].addEventListener('click', () => {
+        hidden[i].style.display='none';
+        less[0].style.display='none';
+        more[0].style.display='block';
+    });
+}
+window.addEventListener('scroll', function(){
+    if(document.documentElement.scrollTop>1750){
+        follow.style.top = document.documentElement.scrollTop-1750 + 'px';
+    }
+});
+
+miniBtn.forEach((element) =>{
+    element.addEventListener('click', () =>{
+        let op = element.innerHTML;
+        if(op == '+' && Number(number[0].innerText)<999){
+            for(let i=0; number.length > i; i++){
+                number[i].innerText = Number(number[i].innerHTML) + 1;
+            }
+        }else if(op == '-' && Number(number[0].innerText)>1){
+            for(let i=0; number.length > i; i++){
+                number[i].innerText = Number(number[i].innerHTML) - 1;
+            }
+        }
+        for(let i=0; price.length > i; i++){
+            price[i].innerText = Number(Number(number[0].innerHTML) * productPrice)
+            .toLocaleString('ko-KO');
+        }
+    });
+});
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo6">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/preview.png" alt="liferary 도서 뷰어">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3><a href="#">도서 뷰어 페이지</a></h3>
+                        <p>참여 항목 : 기획 및 제작</p>
+                        <p>구현 기능 목록 : 드래그 번역(박스 생성 및 드래그한 부분 확대로 대체), 글씨 크기 변경, 야간모드</p>
+                        <div class="codeBox">
+                            <pre>
+const toggleT = document.getElementById('toggleTrans');
+const toggleB = document.getElementById('toggleBlack');
+const toggleD = document.getElementById('toggleDrag');
+const transSize = document.getElementById('transSize');
+const foreignBefore = document.getElementById('foreignBefore');
+const foreignAfter = document.getElementById('foreignAfter');
+const toggle = document.getElementsByClassName('toggle');
+const sizeBtn = document.querySelectorAll('.transSize>li');
+const sizeT = document.getElementsByClassName('transSize');
+const foreignText = document.getElementsByClassName('foreignText');
+const krText = document.querySelectorAll('.krText');
+const krTextRight = document.querySelector('#foreignAfter .krText')
+const sizeSelect = document.getElementsByClassName('sizeSelected');
+const backBtn = document.getElementsByClassName('backBtn');
+let draged = document.createElement('div');
+if(window.innerWidth>=1200) sizeBtn[2].classList.add('sizeSelected');
+else sizeBtn[1].classList.add('sizeSelected');
+//토글키 온오프 제어
+for(var i=0; i<toggle.length; i++){ 
+    toggle[i].addEventListener('click', function(){
+        if(this.classList.contains('toggleOn')){
+            this.classList.remove('toggleOn');
+        }else this.classList.add('toggleOn');
+    });
+}
+//크기변경 토글키 제어
+transSize.addEventListener('click', function(){
+    if(this.classList.contains('toggleOn')){
+        sizeT[0].style.display = 'flex';
+    }else sizeT[0].style.display = 'none';
+});
+//크기변경 실적용
+sizeBtn.forEach(element => {
+    let i = Number(element.innerHTML) + 'px'; 
+    //sizeBtn의 내부값을 Number데이터형으로 변경한 후 px를 붙여서 i에 저장 ex) 16->16(숫자)->16px
+    element.style.fontSize = i;
+    element.addEventListener('click', () => {
+        foreignBefore.style.fontSize = i;
+        foreignAfter.style.fontSize = i;
+        sizeSelect[0].classList.remove('sizeSelected')
+        element.classList.add('sizeSelected');
+    });
+});
+//야간모드 토글키 제어
+toggleB.addEventListener('click', function(){
+    if(this.classList.contains('toggleOn')){
+        foreignBefore.classList.add('nightMod');
+        foreignAfter.classList.add('nightMod');
+        draged.classList.add('nightMod');
+        foreignBefore.classList.remove('dayMod');
+        foreignAfter.classList.remove('dayMod');
+        draged.classList.remove('dayMod');
+    }else {
+        foreignBefore.classList.add('dayMod');
+        foreignAfter.classList.add('dayMod');
+        draged.classList.add('dayMod');
+        foreignBefore.classList.remove('nightMod');
+        foreignAfter.classList.remove('nightMod');
+        draged.classList.remove('nightMod');
+    }
+});
+//드래그번역 토글키 제어
+for(let i=0;i<foreignText.length;i++){
+    foreignText[i].addEventListener('selectstart', () => {
+        draged.remove(); //생성된 div.draged 지우기
+        foreignText[i].addEventListener('mouseup', (e) => { 
+            let innerString = window.getSelection().toString(); 
+            //선택한부분의 내용을 불러와서 문자로 변환해 innerString에 대입
+            if (innerString.length > 0 && toggleD.classList.contains("toggleOn")) { 
+            //조건문 : 토글키 확인되고 드래그한 글자수가 0을 넘으면
+                foreignText[i].appendChild(draged); 
+                //원문 전체 div의(왼쪽 드래그하면 왼쪽, 오른쪽 드래그하면 오른쪽) 가장 앞쪽에 div생성
+                draged.classList.add('draged'); //방금 생성한 div에 .draged부여
+                draged.style.top = e.clientY + 30 + "px"; //div.draged 위치 지정
+                draged.style.left = e.clientX - 30 + "px"; //div.draged 위치 지정
+                //e.clientX, e.clientY : 팝업창 + 마우스 이벤트니까 창을 기준으로 마우스 위치 잡아옴
+                draged.innerText = innerString; //div.draged내부에 innerString값을 넣음
+            }
+        });
+    });
+}
+//자동번역 토글키 제어
+toggleT.addEventListener('click', function(){
+    if(toggleT.classList.contains('toggleOn')){
+        if(window.innerWidth >= 1200){
+            foreignText[2].style.display = 'none';
+            krTextRight.style.display = 'block';
+        } else {
+            foreignText[1].style.display = 'none';
+            krText.forEach((el) => {
+                el.style.display = 'block';
+            });
+        }
+    }else{
+        if(window.innerWidth >= 1200){
+            foreignText[2].style.display = 'block';
+            krTextRight.style.display = 'none';
+        } else {
+            foreignText[1].style.display = 'block';
+            krText.forEach((el) => {
+                el.style.display = 'none';
+            });
+        }
+    }
+});
+backBtn[0].addEventListener('click', () => {
+    if(window.innerWidth >=1200)
+        window.open("about:blank","_self").close()
+    else history.back();
+}); //닫기버튼 제어 
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo photo7">
+                    <div class="siteImage">
+                        <div class="imgWrap">
+                            <img src="images/liferary/login.png" alt="liferary login form">
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <h3>로그인 폼</h3>
+                        <p>참여 항목 : 기획 및 제작</p>
+                        <p>구현 기능 목록 : 모달 열기 및 닫기, 회원가입 페이지와 로그인 상호간 변경</p>
+                        <div class="codeBox">
+                            <pre>
+//login button control
+for(let i=0; i<login.length; i++){
+  login[i].addEventListener('click', () => {
+    registerForm.style.display='none'; //#registerForm 안보이게 설정
+    loginForm.style.display='block'; //#loginForm 보이게 설정
+    modal.style.display='block'; //#modal 보이게 설정
+  });
+}
+//register button control
+for(let i=0; i<register.length; i++){
+  register[i].addEventListener('click', ()=>{
+    registerForm.style.display='block'; //#registerForm 보이게 설정
+    loginForm.style.display='none'; //#loginForm 안보이게 설정
+    modal.style.display='block'; //#modal 보이게 설정
+  });
+}
+//modal click(close) control
+modal.addEventListener('click', () => {
+  loginForm.style.display='none'; //#loginForm 안보이게 설정
+  registerForm.style.display='none'; //#registerForm 안보이게 설정
+  modal.style.display='none'; //#modal 안보이게 설정
+});
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section#pageList end -->
+        <section id="problem" class="parallaxItem">
+            <h2>구현할 때 생긴 문제점</h2>
+            <dl class="problem">
+                <dt>1. Javascript자체의 문제점</dt>
+                <dd>단순한 클릭이벤트 구현을 위해 dom객체에 접근해 객체를 불러와서 사용(document.getElementByID 등)하기 때문에 코드가 지나치게 길어진다.<br>
+                <p>let element = document.getElementById('elementId')</p>
+                의 형태로 변수에 저장하여 사용하였다.
+                </dd>
+                <dd>dom을 통한 createElement시 객체 생성시 ID를 따로 지정해줘야 하기 때문에 코드가 길어진다.</dd>
+                <dt>2. 작성한 코드에 대한 이해</dt>
+                <dd>팀으로 진행한 프로젝트이다보니 팀원에게 내가 작성한 코드에 대한 설명을 해줘야 했다. 기능 구현에 필요한 부분들을 인터넷에서 하나하나 찾아서 만든 코드들을 어떻게 동작하는지 이해했고, 추가로 공부해서 코드에 대한 대략적인 해석을 주석으로 남겼다.</dd>
+                <dt>3. 코드 자체의 최적화 문제</dt>
+                <dd>작성 당시에는 js에 대한 지식이 부족해 최적화되지 못한 부분이 많다. embed.js에서 비동기식으로 로드해야 할 header와 footer 부분을 innerHTML을 통해 조작한 부분이 대표적이다. 추가적인 학습을 통해 TechPcs프로젝트에서 JQuery를 통해 비동기 로딩에 성공했다.</dd>
+            </dl>
+        </section>
+        <!-- section#problem end -->
+        <section id="mockUp">
+            <h2>Mockup</h2>
+            <img src="images/liferary/mockUp.png" alt="목업이미지">
+            <p class="toList"><a href="index.html#work">목록보기</a></p>
+        </section>
+    </div>
+    <script src="js/subPage.js"></script>
+</body>
+
+</html>

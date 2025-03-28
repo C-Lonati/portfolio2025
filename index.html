@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="포트폴리오">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+</head>
+<body id="index">
+    <header id="header">
+        <ul class="lnb">
+            <li class="introTab"><a href="#intro" class="focus">Intro</a></li>
+            <li class="aboutTab"><a href="#about">About</a></li>
+            <li class="skillsTab"><a href="#skills">Skills</a></li>
+            <li class="workTab"><a href="#work">Work</a></li>
+            <li class="contactTab"><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section id="intro" class="parallaxItem" data-bgcolor="#000000">
+        <div class="intro intro1">
+            <h2 class="introText introText1">Hello, my Name is</h2>
+            <p class="introText introText2">Cho Hae Yong</p>
+        </div>
+        <div class="intro intro2">
+            <h2 class="introText introText1">and I'm a</h2>
+            <h4 class="introText introText2">Web Publisher</h4>
+        </div>
+        <div class="scrollDown">
+            <p>scrollDown</p>
+            <p class="downImg"><img src="images/down.svg" alt="아래 방향 화살표"></p>
+        </div>
+    </section>
+    <!-- section#intro end -->
+
+    <section id="about" class="parallaxItem" data-bgcolor="#509999">
+        <h2>About me</h2>
+        <div class="about">
+            <article class="profile profile1">
+                <img src="images/profile.png" alt="증명사진" class="profileImg">
+                <img src="이미지.png" alt="조해용 서명" class="profileSignature">
+            </article>
+            <article class="profile profile2">
+                <h3 class="signature">
+                    <img src="이미지.png" alt="조해용 서명">
+                    <span class="readOnly">조해용</span>
+                </h3>
+                <p>안녕하세요!</p>
+                <p>열정 가득한</p>
+                <p>짧은 업무에도 잘 집중하는</p>
+                <p>협업을 잘 이끌어 나갈 수 있는</p>
+                <p>끝없는 노력을 통해 원하는 것을 이루는</p>
+                <p>UX를 중요시하는</p>
+                <p>웹 퍼블리셔 조해용 입니다.</p>
+                <h4>#열정 #집중 #협업 #노력 #UX 중시</h4>
+            </article>
+            <article class="profile profile3">
+                <h3>학력 및 교육 수료</h3>
+                <div>
+                    <p class="duration">2024.09 ~ 2025.03</p>
+                    <p class="education">(스마트웹&콘텐츠개발) UI/UX웹디자인 웹퍼블리셔 프론트엔드 전문가 양성 수료 - MBC아카데미 컴퓨터학원</p>
+                </div>
+                <div>
+                    <p class="duration">2018.03 ~ 2022.02</p> 
+                    <p class="education">동양미래대학교 컴퓨터공학과 졸업</p>
+                </div>
+                <div>
+                    <p class="duration">2015.03 ~ 2018.02</p> 
+                    <p class="education">인천반도체고등학교 전산과 졸업</p>
+                </div>
+            </article>
+            <article class="profile profile4">
+                <h3>자격사항</h3>
+                <ul>
+                    <li>웹디자인 기능사</li>
+                    <li>정보처리 기능사</li>
+                    <li>컴퓨터 활용 능력 2급</li>
+                    <li>운전면허 1종 보통</li>
+                </ul>
+            </article>
+            <article class="profile profile5">
+                <h3>경력</h3>
+                <div>
+                    <p class="duration">2022.07 ~ 2024.07</p> 
+                    <p class="company">지와이 금속</p>
+                </div>
+                <div>
+                    <p class="duration">2021.07 ~ 2021.08</p> 
+                    <p class="company">(주)지우전자</p>
+                </div>
+                <div>
+                    <p class="duration">2018.01 ~ 2018.09</p> 
+                    <p class="company">(주)인천약품</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- section#about end -->
+
+    <section id="skills" class="parallaxItem" data-bgcolor="#99ccff">
+        <h2>Skills</h2>
+        <div class="skillInfo hidden"></div>
+        <div class="skills">
+            <article class="skill html">
+                <h3>html&css</h3>
+                <div class="chart chart1-1">
+                    <h4 class="chartName">반응형 웹 제작</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="100%"></div>
+                    </div>
+                </div>
+                <div class="chart chart1-2">
+                    <h4 class="chartName">애니메이트 구현</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div>
+                <div class="chart chart1-3">
+                    <h4 class="chartName">VSCode emmet</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="90%"></div>
+                    </div>
+                </div>
+                <!-- <div class="chart chart1-4">
+                    <h4 class="chartName">SCSS</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div> -->
+            </article>
+            <article class="skill lang">
+                <h3>Javascript & library</h3>
+                <div class="chart chart2-1">
+                    <h4 class="chartName">Javascript</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="100%"></div>
+                    </div>
+                </div>
+                <div class="chart chart2-2">
+                    <h4 class="chartName">JQuery</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="100%"></div>
+                    </div>
+                </div>
+                <div class="chart chart2-3">
+                    <h4 class="chartName">React(컴포넌트)</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="skill designTool">
+                <h3>Design Tools</h3>
+                <div class="chart chart3-1">
+                    <h4 class="chartName">포토샵 - 이미지편집</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div>
+                <div class="chart chart3-2">
+                    <h4 class="chartName">드로잉</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="60%"></div>
+                    </div>
+                </div>
+                <div class="chart chart3-3">
+                    <h4 class="chartName">배너 & 포스터 제작</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="60%"></div>
+                    </div>
+                </div>
+                <div class="chart chart3-4">
+                    <h4 class="chartName">XD & Figma - UI/UX작성</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="skill office">
+                <h3>사무업무</h3>
+                <div class="chart chart4-1">
+                    <h4 class="chartName">Excel</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="80%"></div>
+                    </div>
+                </div>
+                <div class="chart chart4-2">
+                    <h4 class="chartName">문서작성</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="90%"></div>
+                    </div>
+                </div>
+                <div class="chart chart4-3">
+                    <h4 class="chartName">powerpoint 작성</h4>
+                    <div class="chartBack">
+                        <div class="chartBar" data-score="70%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- section#skills end -->
+
+    <section id="work" class="parallaxItem" data-bgcolor="#ccffff">
+        <h2>Work</h2>
+        <div class="workBox">
+            <article class="work work1">
+                <a href="liferary.html"><img src="images/project1.jpg
+                " alt="작업물 1 대표이미지"></a>
+                <div class="workInfo">
+                    <a href="liferary.html"><h3>Liferary</h3></a>
+                    <p>#desktop #mobile&tablet</p>
+                    <p>#HTML5 #CSS3 #Javascript</p>
+                    <p>제작기간 : 2024.10.30 ~ 2024.12.02</p>
+                    <p class="pageBtn"><a href="liferary.html">소개 페이지 이동</a></p>
+                    <p class="pageBtn"><a href="https://c-lonati.github.io/liferary/">웹 페이지 이동</a></p>
+                </div>
+            </article>
+            <article class="work work2">
+                <div class="workInfo">
+                    <a href="techpcs.html"><h3>TechPCs</h3></a>
+                    <p>#desktop #tablet #mobile</p>
+                    <p>#HTML5 #CSS3 #Javascript #JQuery #chart.js</p>
+                    <p>제작기간 : 2024.12.03 ~ 2025.02.03</p>
+                    <p class="pageBtn"><a href="techpcs.html">소개 페이지 이동</a></p>
+                    <p class="pageBtn"><a href="https://c-lonati.github.io/TechPcs/">웹 페이지 이동</a></p>
+                </div>
+                <a href="techpcs.html"><img src="images/project2.png" alt="작업물 2 대표이미지"></a>
+            </article>
+            <article class="work work3">
+                <a href="movieclip.html"><img src="images/project3.png"
+                alt="작업물 3 대표이미지"></a>
+                <div class="workInfo">
+                    <a href="movieclip.html"><h3>About time Movie Clip</h3></a>
+                    <p>#desktop #mobile&tablet (반응형으로 변경중)</p>
+                    <p>#HTML5 #CSS3 #Javascript</p>
+                    <p>제작기간 : 2025.02.04 ~ 2025.02.28</p>
+                    <p class="pageBtn"><a href="movieclip.html">소개 페이지 이동</a></p>
+                    <p class="pageBtn"><a href="https://c-lonati.github.io/movieclip/">웹 페이지 이동</a></p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- section#work end -->
+     
+    <section id="contact" class="parallaxItem" data-bgcolor="#ffffff">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <div class="contactMe">
+                <h3>함께 일할 웹 퍼블리셔를 찾고 계신가요?</h3>
+                <p>업무 관련 사항은 아래 메일로 보내주세요.</p>
+                <h4>alexblog0202@gmail.com</h4>
+                <a class="sendEmail" href="mailto:alexblog0202@gmail.com">메일 보내기 <img src="images/goBtn.png" alt="이메일 버튼"></a>
+            </div>
+        </div>
+    </section>
+    <!-- section#contact end -->
+     
+    <script src="js/index.js"></script>
+</body>
+</html>

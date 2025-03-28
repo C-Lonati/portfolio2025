@@ -1,0 +1,88 @@
+$winWidth : 100vw;
+$full : 100%;
+$half : 50%;
+$maxWidth : 100vw;
+@media screen and (minWidth : 1921px){
+    $maxWidth : 1920px;
+}
+html, body{
+    overflow-x : hidden;
+    width : $maxWidth;
+    min-width : 100vw;
+    min-height : 100vh;
+}
+header{
+    .lnb{
+        //display : none;
+        position : fixed;
+        left : 0;
+        top : 0;
+        display : flex;
+        color : #333;
+        //text-shadow : 0 0 1px rgba(255,255,255,0.8);
+        @media screen  and (min-width : 1200px){
+            width : 200px;
+            height : $full;
+            flex-direction: column;
+            justify-content : space-evenly;
+        }
+        @media screen  and (max-width : 1199px){
+            width : $full;
+            height : 60px;
+            flex-direction : row;
+            justify-content : space-between;
+        }
+        li{
+            width : $full;
+            font-weight : bold;
+            cursor: pointer;
+            text-align: center;
+            &:focus{
+                color : white !important;
+                text-shadow : 0 0 1px rgba(0,0,0,0.8) !important;
+                font-size : 200px;
+            }   
+        }
+        li:focus{
+            color : white !important;
+            text-shadow : 0 0 1px rgba(0,0,0,0.8) !important;
+            font-size : 200px;
+        }
+    }
+}
+section{
+    width : $maxWidth;
+    min-height : 100vh;
+}
+
+#intro{
+    background : black;
+}
+
+#profile{
+
+}
+
+#skills{
+
+}
+
+#work{
+
+}
+
+#contact{
+
+}
+
+
+
+#modal{
+    background : rgba(0,0,0,0.5);
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    top : 0;
+    left : 0;
+    display : none;
+}
