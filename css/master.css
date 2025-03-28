@@ -4,6 +4,7 @@
 @import url('https://fonts.cdnfonts.com/css/agency-fb');
 @import url("https://use.typekit.net/ozd4ynw.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 @font-face {
   font-family: 'payboocB';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
@@ -20,12 +21,19 @@
   font-family: 'payboocL';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Light.woff') format('woff');
 }
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 /*basic setting*/
 html, body {
   overflow-x: hidden;
   width: 100vw;
   min-width : 100vw;
   min-height : 100vh;
+  font-family: 'Pretendard-regular', sans-serif;
 }
 svg{
   display : none;
@@ -296,6 +304,9 @@ section>h2{
 }
 .signature{
   height : 80px;
+  font-family: "Nanum Pen Script", cursive;
+  font-size : 80px;
+  font-weight : 400;
 }
 .duration,
 .company,
@@ -328,6 +339,10 @@ section>h2{
 .chart{
   margin : 20px 0;
 }
+.chart>img{
+  max-height : 30px;
+  margin-bottom : 10px;
+}
 .chartBack{
   height : 20px;
   background-color : #777;
@@ -351,7 +366,7 @@ section>h2{
 .skillInfo{
   background : #fff;
   min-height : 30px;
-  padding : 10px 20px;
+  padding : 10px 20px !important;
   border-radius: 10px;
   position : fixed;
   top : 0;
@@ -826,6 +841,10 @@ section>h2{
 /*section#mockUp setting*/
 #sub_TechPcs .mockUp{
   background : url(../images/project2.png)50% 50% no-repeat;
+  background-size : 100%;
+}
+#sub_MovieClip .mockUp{
+  background : url(../images/movieclip/back.png)100% 100% no-repeat;
   background-size : 100%;
 }
 @media screen and (max-width : 1279px) {
