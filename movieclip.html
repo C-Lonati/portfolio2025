@@ -53,20 +53,20 @@
                 <h3>컬러</h3>
                 <ul class="color">
                     <li>
-                        <div class="box" data-color="#004849"></div>
-                        <p>#004849</p>
+                        <div class="box" data-color="#ffbf00"></div>
+                        <p>#ffbf00</p>
                     </li>
                     <li>
-                        <div class="box" data-color="#49b591"></div>
-                        <p>#49b591</p>
+                        <div class="box" data-color="#ffdf7f"></div>
+                        <p>#ffdf7f</p>
                     </li>
                     <li>
-                        <div class="box" data-color="#2e70db"></div>
-                        <p>#2e70db</p>
+                        <div class="box" data-color="#4e276d"></div>
+                        <p>#4e276d</p>
                     </li>
                     <li>
-                        <div class="box" data-color="#80ee99"></div>
-                        <p>#80ee99</p>
+                        <div class="box" data-color="#000000"></div>
+                        <p>#000000</p>
                     </li>
                 </ul>
             </li>
@@ -116,7 +116,7 @@
             <div class="photo photo1">
                 <div class="siteImage">
                     <div class="imgWrap">
-                        <img src="images/movieclip/index.png" alt="movieclip 메인">
+                        <img src="images/movieclip/story.png" alt="movieclip 메인">
                     </div>
                 </div>
                 <div class="pageInfo">
@@ -124,7 +124,85 @@
                     <p>참여 항목 : 기획 및 제작</p>
                     <p>구현 기능 목록 : 스크롤에 따른 좌우 슬라이드</p>
                     <div class="codeBox">
-                        <pre>
+                        <pre>// 브라우저 크기 계산 및 초기화
+// Calculate the dimensions of the page
+for(let i=0; i<storys.length; i++){
+    epi[i] = window.innerWidth * i * 1.5 - 325;
+    sectionTop[i] = window.innerWidth * 1.5 * i;
+    storys[i].style.left = window.innerWidth * i * 1.5 + 'px';
+    storys[i].style.zIndex = i * 10 + 5;
+}
+let storyHeight;
+if(window.innerWidth >= 1200){
+    storyHeight = window.innerWidth * (storys.length - 1) * 1.5;
+}else {
+    storyHeight = window.innerWidth * (storys.length - 1) * 1.5 + 300;
+}
+casting.style.top = storyHeight + window.innerWidth + 'px';
+interview.style.paddingTop = storyHeight + actorHeight + window.innerWidth + 'px';
+reviewList.style.width = reviewWidth + 'px';
+soundTrack.style.paddingTop = reviewWidth + (window.innerWidth>=1200?0:winInner) + 'px';
+let interviewHeight;
+interviewHeight = Number(getComputedStyle(interview).height.substring(0, getComputedStyle(interview).height.length - 2));
+
+
+window.addEventListener('scroll',()=>{
+    storySlide.style.left = -1 * window.scrollY + 'px';
+    slideIn.style.right = window.scrollY - window.innerHeight * 12.8 + 'px';
+    if(slideIn.style.right.substring(0, slideIn.style.right.length - 2) > 20)
+        slideIn.style.right = '20px';
+    epi01.style.top = window.scrollY * 0.5 + window.innerHeight * 0.2 + 'px';
+    epi01.querySelector('span').style.top = window.scrollY + 'px';
+    for(let i = 1; i < epi.length; i++){
+        let temp = [];
+        temp[i] = storys[i].querySelectorAll('.script');
+        temp[i].forEach((e) => {
+            if(window.innerWidth >= 1200)
+                e.style.left = window.scrollY - epi[i] + 'px';
+            else e.style.left = window.scrollY - epi[i] - (window.innerWidth / 2) + 'px';
+            if (window.scrollY - epi[i] > 1500) {
+                e.style.display = 'none';
+            }
+            else {
+                e.style.display = 'block';
+            }
+        });
+    }
+    for (let i = 0; i < storys.length; i++) {
+        if (window.scrollY > sectionTop[i] && window.scrollY < sectionTop[i + 1]) {
+            storys[i].style.position = 'fixed';
+            storys[i].style.left = 0;
+        } else if(sectionTop[i+1] == null && window.scrollY > sectionTop[i] && window.scrollY < sectionTop[i] + window.innerWidth){
+            storys[i].style.position = 'fixed';
+            storys[i].style.left = 0;
+        }else {
+            storys[i].style.position = 'absolute';
+            storys[i].style.left = sectionTop[i] + 'px';
+        }
+    }
+    // 스크롤 위치에 따른 영상 비동기 로딩
+    // Asynchronously load and inject video iframes to optimize performance
+    // Load videos based on scroll position
+    // 스크롤 위치에 따른 슬라이드 정지 제어
+    // Toggle 'stop' state based on scroll threshold
+    if(window.scrollY > storyHeight){
+        story.classList.add('stop');
+        // 프리징 발생
+        /* 기존 코드
+        if (!loading) soundTrack.innerHTML = ``
+            loading = true;
+        */
+        // 원인 : iframe생성보다 loading의 변수 변경이 후순위였기에 영상 재생 시 프리징 문제가 발생
+        // 해결 : loading변수값 변경을 iframe생성보다 이전으로 둠
+        if (!loading) {
+            loading = true;
+            soundTrack.innerHTML = ``
+        }
+    }else {
+        story.classList.remove('stop');
+    }
+
+});
 </pre>
                     </div>
                 </div>
@@ -150,6 +228,14 @@
             <dd>라이브러리를 사용하면 js에 비해 로딩 속도가 느려지기에 gsap을 이용해 구현할지, 라이브러리 없이 구현할지에 대해 고민했다.</dd>
             <dd>포트폴리오에서 gsap을 사용하기로 결정했기에 별도의 라이브러리 없이 구현하기로 결정했다.</dd>
             <dd>구현 결과 gsap을 사용하는쪽이 유지보수가 훨씬 쉽다는 결론에 도달했다.</dd>
+            
+            <dt>3. iframe 프리징 문제</dt>
+            <dd>1에서 구현한 코드로 인해 윈도우 프리징 발생, iframe과다 생성이 원인으로 되었다.</dd>
+            <dd>기존 조건문 검사-innerhtml수정-조건문 종료 후 변수 수정되던 코드를 조건문검사-변수 수정-innerhtml수정 후 조건문 종료 순으로 변경</dd>
+            <dd><xmp>if (!loading){
+    loading = true;
+    soundTrack.innerHTML = '';
+}</xmp></dd>
         </dl>
     </section>
     <!-- section#problem end -->
