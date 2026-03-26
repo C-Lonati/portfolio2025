@@ -31,7 +31,7 @@ h5{
     font-size : 1em;
 }
 .hidden{
-    display : none;
+    display : none !important;
 }
 .readOnly{
     display : inline-block;

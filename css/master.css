@@ -129,8 +129,67 @@ section>h2{
   #index section>*{
     padding-left : max(20%, 300px);
   }
+  #designInfo img.focusDesign{
+    left : 10vw;
+  }
 }
 
+#modal{
+  z-index: 9998;
+  position : fixed;
+  width : 100vw;
+  height : 100vh;
+  top : 0;
+  left : 0;
+  background : rgba(0, 0, 0, 0.5);
+}
+#designInfo{
+  z-index: 9999;
+  position: fixed;
+  height: 80vh;
+  top : 10vh;
+  display : flex;
+  overflow : hidden;
+  border-radius: 10px;
+  flex-wrap : wrap;
+  background : white;
+}
+#designInfo h3{
+  display : block;
+  width : 100%;
+  text-align: center;
+  margin-top : 10px;
+}
+#designInfo img{
+  max-height : 40%;
+  margin : 5px;
+  display: inline-block;
+  position : relative;
+}
+#designInfo img.focusDesign{
+  z-index : 10000;
+  position : absolute;
+  max-width : 100%;
+  height : 100%;
+  max-height: 100%;
+  left : 50%;
+  margin : 0;
+}
+@media screen and (min-width : 1280px) {
+  #designInfo {
+    left: 30vw;
+    width: 40vw;
+  }
+}
+@media screen and (max-width : 1279px) {
+  #designInfo {
+    left: 10vw;
+    width: 80vw;
+  }
+  #designInfo img{
+    max-height : 30%;
+  }
+}
 
 /*section#intro setting*/
 #index #intro{
@@ -243,32 +302,47 @@ section>h2{
 #about{
   font-size : 18px;
 }
+@media screen and (min-width:768px) {
+  .about {
+    display: grid;
+    grid-template-areas:
+      'profile1 profile2'
+      'profile1 profile3'
+      'profile4 profile5';
+    flex-wrap: wrap;
+    gap: 50px max(10%, 20px);
+  }
+
+  .profile1 {
+    grid-area: profile1;
+  }
+
+  .profile2 {
+    grid-area: profile2;
+  }
+
+  .profile3 {
+    grid-area: profile3;
+  }
+
+  .profile4 {
+    grid-area: profile4;
+  }
+
+  .profile5 {
+    grid-area: profile5;
+  }
+}
+@media screen and (max-width:767px) {
+  .profile{
+    margin-bottom : 20px;
+  }
+
+}
 .about{
   position : relative;
   top : 500px;
   opacity : 0;
-  display : grid;
-  flex-wrap : wrap;
-  gap : 50px max(10%, 20px);
-  grid-template-areas : 
-  'profile1 profile2'
-  'profile1 profile3'
-  'profile4 profile5';
-}
-.profile1{
-  grid-area : profile1;
-}
-.profile2{
-  grid-area : profile2;
-}
-.profile3{
-  grid-area : profile3;
-}
-.profile4{
-  grid-area : profile4;
-}
-.profile5{
-  grid-area : profile5;
 }
 
 @media screen and (min-width: 1280px) {
@@ -384,10 +458,12 @@ section>h2{
 }
 @media screen and (min-width : 1280px) {
   #work .work {
-    max-height: 80vh;
+    height : 80vh;
+    max-height : 800px;
     clear: both;
-    flex: 28% 0 0;
+    flex: 20% 0 0;
     cursor: pointer;
+    position : relative;
   }
   .workInfo{
     padding : 0 20px;
@@ -398,6 +474,10 @@ section>h2{
     width : 100%;
     filter : grayscale(1);
     transition : .3s;
+  }
+  .work:nth-child(even) img{
+    position : absolute;
+    bottom : 0;
   }
   .pageBtn>a{
     padding : 10px 20px;
@@ -451,10 +531,11 @@ section>h2{
     font-size : 3vw;
   }
 }
+
 .pageBtn{
+  margin: 10px auto 0;
   width : 80%;
   text-align: center;
-  margin : 20px auto;
 }
 .pageBtn>a{
   display : block;
