@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="포트폴리오">
     <title>포트폴리오</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/master.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -22,6 +22,19 @@
             <li class="contactTab"><a href="#contact">Contact</a></li>
         </ul>
     </header>
+    <!--modal-->
+    <div id="modal" class="hidden"></div>
+    <div id="designInfo" class="hidden">
+        <h3>사진을 누르면 크게 볼 수 있습니다.</h3>
+        <img src="images/design/design1.png" alt="디자인1" class="designImg">
+        <img src="images/design/design2.png" alt="디자인2" class="designImg">
+        <img src="images/design/design3.png" alt="디자인3" class="designImg">
+        <img src="images/design/design4.png" alt="디자인4" class="designImg">
+        <img src="images/design/design5.png" alt="디자인5" class="designImg">
+        <img src="images/design/design6.png" alt="디자인6" class="designImg">
+        <img src="images/design/design7.png" alt="디자인7" class="designImg">
+    </div>
+
     <section id="intro" class="parallaxItem" data-bgcolor="#000000">
         <div class="intro intro1">
             <h2 class="introText introText1">Hello, my Name is</h2>
@@ -253,6 +266,16 @@
                     <p class="pageBtn"><a href="movieclip.html">소개 페이지 이동</a></p>
                     <p class="pageBtn"><a href="https://c-lonati.github.io/movieclip/">웹 페이지 이동</a></p>
                 </div>
+            </article>
+            <article class="work work4">
+                <div class="workInfo">
+                    <h3>식당 메뉴판 디자인</h3>
+                    <p>#design</p>
+                    <p>#photoshop #inkscape</p>
+                    <p>제작기간 : 2026.02.26 ~ 2026.03.05</p>
+                    <p class="pageBtn"><a>소개 팝업</a></p>
+                </div>
+                <img src="images/project4.png" alt="작업물 4 대표이미지">
             </article>
         </div>
     </section>

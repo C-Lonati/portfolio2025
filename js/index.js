@@ -96,6 +96,38 @@ chartBack.forEach(e => {
 });
 
 
+const design = document.querySelector('.work4');
+const modal = document.querySelector('#modal');
+const designInfo = document.querySelector('#designInfo');
+const designImg = document.querySelectorAll('.designImg')
+design.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    designInfo.classList.remove('hidden');
+});
+modal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    designInfo.classList.add('hidden');
+});
+designImg.forEach(e=>{ 
+    e.addEventListener('click', () => {
+        if(e.classList.contains('focusDesign')){
+            e.classList.remove('focusDesign');
+            designImg.forEach(img => {
+                img.classList.remove('hidden');
+                img.style.marginLeft = '5px';
+            });
+            return;
+        } 
+        designImg.forEach(img => {
+            img.classList.remove('focusDesign');
+            img.classList.add('hidden');
+        });
+        e.classList.add('focusDesign');
+        e.classList.remove('hidden');
+        let width = e.offsetWidth;
+        e.style.marginLeft = '-' + width/2+'px';
+    });
+});
 
 /*let lastWidth;
 if($(window).width() >= 1280){
